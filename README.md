@@ -13,7 +13,7 @@ O react-three-fiber vai juntar a biblioteca threejs com o React.
 
 Dessa forma fica mais fácil componentizar os elementos do seu projeto, de sua scene 3d.
 
-## $$Para começar a construir coisas daoras é importante seguir o passo-a-passo de 3 Etapas
+## Para começar a construir coisas daoras é só seguir o passo-a-passo de 3 Etapas
 
 ### 1) Crie seu novíssimo exemplo dentro do diretório **examples**
 
@@ -48,18 +48,23 @@ import Sample from '../examples/sample';
 ### Você pode se achar necessário criar seus próprios componentes de Iluminação da cena e de Ambiente da cena.
 
 Possibilitando a criação de seus light groups personalizados para a cena.
+
+
 Possibilitando a criação de seus ambientes personalizados.
+
+
 (Alguns exemplos fazem uso de Lights e Ambient personalizado, porém isso acarreta na performance do projeto como um todo)
+
 
 ### Você pode achar os componentes default de iluminação e de Environment dentro da pasta componentes.
 
-[] criar componente genérico para carregamento de models
-[] criar componente genérico para sombras nas iluminações
-[] criar componentes específicos para iluminações diferenciadas
-[] criar componente de linhas guias para development-stage
-[] criar componente de player de áudio threejs
+[ ] criar componente genérico para carregamento de models
+[ ] criar componente genérico para sombras nas iluminações
+[ ] criar componentes específicos para iluminações diferenciadas
+[ ] criar componente de linhas guias para development-stage
+[ ] criar componente de player de áudio threejs
 
-[] criar qualquer componente dentro de components pode ser uma boa ideia, se ñ for algo muito específico cogite a criação desse efeito/comportamento dentro do diretório de **components**
+[ ] criar qualquer componente dentro de components pode ser uma boa ideia, se ñ for algo muito específico cogite a criação desse efeito/comportamento dentro do diretório de **components**
 
 
 ### Algumas Libs e fontes de inspiração e consulta
@@ -76,6 +81,15 @@ O threejs é base, react-three-fiber é um facilitador e o drei é a cereja.
 - Se já tiver um *grasp* da documentação do threejs parta para a construção de novos exemplos usando o r3f
 - Se se sentir a vontade para inventar coisas novas e fugir da cultura, use drei para efeitos mais dahoras. 
 
-### Você pode ficar a vontade para criar qualquer componente e criar quantos exemplos quiser, use e re-use os exemplos que já existem. Não submeta alterações de exemplos que não são seus. Não altere componentes que não são seus. Faça um Clone do diretório do componente caso queira modifica-lo ao seu gosto, ou, de novo, se for algo muito específico, crie dentro da própria pasta do exemplo
+### Você pode ficar a vontade para criar qualquer componente e criar quantos exemplos quiser, use e re-use os exemplos que já existem. 
+
+Não submeta alterações de exemplos que não são seus. 
+
+
+Não altere componentes que não são seus. 
+
+
+Faça um Clone do diretório do componente caso queira modifica-lo ao seu gosto, ou, de novo, se for algo muito específico, crie dentro da própria pasta do exemplo.
+
 
 # Culture isn't your friend

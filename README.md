@@ -59,10 +59,19 @@ Possibilitando a criação de seus ambientes personalizados.
 ### Você pode achar os componentes default de iluminação e de Environment dentro da pasta componentes.
 
 [ ] criar componente genérico para carregamento de models
+
+
 [ ] criar componente genérico para sombras nas iluminações
+
+
 [ ] criar componentes específicos para iluminações diferenciadas
+
+
 [ ] criar componente de linhas guias para development-stage
+
+
 [ ] criar componente de player de áudio threejs
+
 
 [ ] criar qualquer componente dentro de components pode ser uma boa ideia, se ñ for algo muito específico cogite a criação desse efeito/comportamento dentro do diretório de **components**
 

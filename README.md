@@ -1,4 +1,6 @@
-# Three-js Code Samples
+# Culture isn't my friend readme
+
+# pcoi
 
 Esse projeto é dedicado para pessoas que querem começar a brincar com 3d e não sabem por onde começar.
 
@@ -13,23 +15,34 @@ O react-three-fiber vai juntar a biblioteca threejs com o React.
 
 Dessa forma fica mais fácil componentizar os elementos do seu projeto, de sua scene 3d.
 
-## Para começar a construir coisas daoras é só seguir o passo-a-passo de 3 Etapas
+## Para começar a construir coisas daoras é só seguir as três etapas
 
-### 1) Crie seu novíssimo exemplo dentro do diretório **examples**
+Antes de começar certifique-se da instalação do node, e também um gerenciador de pacotes.
+
+### 0 _
+
+Rode o comando de **instalação de depêndencias** e ao final **inicie o servidor local** em [localhost:3000](http://localhost:3000) com o **script *start*** que se encontra dentro do arquivo *package.json* 
+
+### 1 _
+
+Crie seu novíssimo exemplo dentro do diretório **examples**
 
 e.g.:
 
 `banana/index.js`
 
-### 2) Depois de codado, o Componente precisa ser registrado nas rotas
+### 2 _
 
-```js
+Depois de codado, o Componente precisa ser registrado nas rotas
+
+```jsx
 // routes/index.js
 
-// importando seu Novo Exemplo (ele é um Component)
+// importando seu 'Novo Exemplo' (ele é um Component)
 import Sample from '../examples/sample';
 
-// dentro do Switch no Route deve se atribuir um componente e uma rota para acessar o sample
+// dentro do Switch no Route deve se atribuir 
+// um componente e uma rota para acessar o sample
 
 <BrowserRouter>
   <Switch>
@@ -38,67 +51,81 @@ import Sample from '../examples/sample';
   </Switch>
 </BrowserRouter>
 
-
 ```
 
-### 3) Pronto, agora se você acessar essa rota você tem acesso ao seu novo exemplo, brinque, modifique, teste suas modificações e começe já a criar softwares interativos!
+### 3 _
 
-## Extra:
+Pronto, agora se você acessar essa rota você tem acesso ao seu novo exemplo, brinque, modifique, teste suas modificações e começe já a criar softwares interativos! 
 
-### Você pode se achar necessário criar seus próprios componentes de Iluminação da cena e de Ambiente da cena.
+---
 
-Possibilitando a criação de seus light groups personalizados para a cena.
+## Algumas Libs e fontes de inspiração e consulta
 
+Você pode estagnar aqui ou ir atrás da documentação das ferramentas e tecnologias disponíveis nesse projeto
 
-Possibilitando a criação de seus ambientes personalizados.
+> Links that should be always on opened tabs
 
+- [ThreeJS **Docs**](https://threejs.org/docs/) & Guide [**https://threejsfundamentals.org/**](https://threejsfundamentals.org/)
+- [ReactThreeFiber](https://github.com/pmndrs/react-three-fiber) & [**Docs**](https://inspiring-wiles-b4ffe0.netlify.app/) - [**Tutorials**](https://alligator.io/react/react-with-threejs) & Code Samples  **→ [Paul Henschel's CodeSandBox](https://codesandbox.io/u/drcmda)**
+- **[drei storybook](https://drei-storybook.netlify.app/)**
 
-(Alguns exemplos fazem uso de Lights e Ambient personalizado, porém isso acarreta na performance do projeto como um todo)
+---
 
+Se for começar agora, foque nas documentações do threejs
 
-### Você pode achar os componentes default de iluminação e de Environment dentro da pasta componentes.
+Se já tem um *grasp* do que é uma camera, grupos de luzes, geometries e materials: 
+Parte para a construção de novos exemplos usando o r3f
 
-[ ] criar componente genérico para carregamento de models
+Se se sentir a vontade para inventar coisas novas e fugir da cultura, use drei para efeitos mais dahoras.
 
+---
 
-[ ] criar componente genérico para sombras nas iluminações
+### Você pode se achar necessário criar seus próprios componentes de Iluminação da cena e componentes de Environment da cena.
 
+- Possibilitando a criação de seus light groups personalizados para a cena.
+- Possibilitando a criação de seus ambientes personalizados.
+- (Alguns exemplos fazem uso de Lights e Environment personalizado (porém isso acarreta na performance do projeto como um todo)
 
-[ ] criar componentes específicos para iluminações diferenciadas
+# Design até o momento
 
+```jsx
+/*
+		Routes armazenam as rotas, o roteamento será feito através do react-router-dom
+		Cada rota renderiza um componente
+*/
+```
 
-[ ] criar componente de linhas guias para development-stage
+![https://i.imgur.com/cvUpgFg.gif](https://i.imgur.com/cvUpgFg.gif)
 
+---
 
-[ ] criar componente de player de áudio threejs
+Você pode achar os componentes default de iluminação e de Environment dentro da pasta componentes.
 
+- [ ]  criar componente genérico para carregamento de models
+- [ ]  criar componente genérico para sombras nas iluminações
+- [ ]  criar componentes específicos para iluminações diferenciadas
+- [ ]  criar componentes de linhas guias para development-stage
+- [ ]  Criar GUI eficiente para development-stage
+- [ ]  criar componente de player de áudio threejs
+- [ ]  **criar qualquer componente dentro de components pode ser uma boa ideia**
+- [ ]  cogite a criação desse efeito/comportamento personalizado de ambiente e iluminação dentro do diretório de **components/custom**
 
-[ ] criar qualquer componente dentro de components pode ser uma boa ideia, se ñ for algo muito específico cogite a criação desse efeito/comportamento dentro do diretório de **components**
+---
 
+## *Obs. relevante para participar do desenvolvimento*
 
-### Algumas Libs e fontes de inspiração e consulta
+Você pode ficar a vontade para **criar** **qualquer** **componente** e criar **quantos** **exemplos** **quiser**, use e re-use os exemplos que já existem, brinque e construa coisas.
 
-Você pode estagnar aqui ou ir atrás da documentação das ferramentas e tecnologias disponíveis nesse projeto:
+- Não submeta alterações de exemplos que não são seus.
+    - (ao invés disso clone os exemplos para criar os seus próprios *artistic frames)*
 
-- ThreeJS - ThreeJS Docs & Threejsfundamentals
-- ReactThreeFiber
-- drei
+- Novos componentes serão salvos na seguinte diretório: **src/components/Componente/custom**. 
+Isso funcionará tanto para ***Ambient*** (que eu deveria mudar o nome para Environment) quanto para ***Lights***. Após feito a criação pode ser alterado o ***index.js*** do Componente desejado.
 
-O threejs é base, react-three-fiber é um facilitador e o drei é a cereja.
+# *Projetos*
 
-- Se for começar agora, foque nas documentações do threejs
-- Se já tiver um *grasp* da documentação do threejs parta para a construção de novos exemplos usando o r3f
-- Se se sentir a vontade para inventar coisas novas e fugir da cultura, use drei para efeitos mais dahoras. 
+Na guia de projetos do repositório é possível encontrar os desenvolvimentos atuais de cada dia do projeto e também o que está acompanhar o que está vindo *em breve.*
 
-### Você pode ficar a vontade para criar qualquer componente e criar quantos exemplos quiser, use e re-use os exemplos que já existem. 
+# See ya.
 
-Não submeta alterações de exemplos que não são seus. 
-
-
-Não altere componentes que não são seus. 
-
-
-Faça um Clone do diretório do componente caso queira modifica-lo ao seu gosto, ou, de novo, se for algo muito específico, crie dentro da própria pasta do exemplo.
-
-
-# Culture isn't your friend
+*Culture isn't your [friend](https://twitter.com/iagokrt) 🐦 Shall we?*

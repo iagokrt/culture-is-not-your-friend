@@ -1,6 +1,6 @@
 import React, { useRef, useMemo } from 'react';
 import { Canvas, useFrame } from "react-three-fiber";
-import Lights from "../ligthe";
+import Lights from "../../Lights";
 import Ambient from "../../Ambient";
 
 import { TrackballControls, MeshDistortMaterial, Icosahedron } from 'drei';

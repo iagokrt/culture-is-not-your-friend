@@ -1,14 +1,15 @@
 import React, { useRef } from 'react';
+
 import { Canvas, useFrame } from "react-three-fiber";
-import Lights from "./Lights";
-import Ambient from "./Ambient";
+
+import Lights from "../../components/Lights";
+import Ambient from "../../components/Ambient";
 
 import { OrbitControls } from 'drei';
 
 function Dodecahedron(props) {
   // This reference will give us direct access to the mesh
   const mesh = useRef()
-
 
   // Rotate mesh every frame, this is outside of React without overhead
   useFrame(() => (mesh.current.rotation.x = mesh.current.rotation.y += 0.01))

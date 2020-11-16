@@ -3,10 +3,9 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 
 /* examples */
-
-import Dark from '../examples/dark';
-import Lockcam from '../examples/lockcam';
-import multipleMashes from '../examples/multipleMashes'
+import Trac from '../examples/trac'
+import TracTwo from '../examples/tractwo'
+import Spin from '../examples/spin'
 
 /* component samples */
 
@@ -17,8 +16,8 @@ export default function Routes() {
   return (
     <BrowserRouter>
       <Switch>
-        <Route exact path="/" component={Dark} />
-        <Route path="/3d" component={multipleMashes} />
+        <Route exact path="/" component={Spin} />
+        <Route path="/two" component={TracTwo} />
       </Switch>
     </BrowserRouter>
   );

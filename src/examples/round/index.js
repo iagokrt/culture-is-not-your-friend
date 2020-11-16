@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 
 import { Canvas, useFrame } from "react-three-fiber";
 
-import Ambient from "../../components/Ambient";
+import Environment from "../../components/Environment";
 import Lights from "../../components/Lights";
 
 import { TrackballControls, MeshWobbleMaterial, MeshDistortMaterial } from 'drei';
@@ -27,9 +27,9 @@ function Icosaedron(props) {
 
 function Round() {
   return (
-    <Canvas concurrent>
+    <Canvas>
       <Lights />
-      <Ambient />
+      <Environment />
       <Icosaedron position={[-3.2, 0, 0]} />
 
       <mesh>

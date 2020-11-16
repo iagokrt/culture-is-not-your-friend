@@ -1,7 +1,7 @@
-import React, { useRef, useMemo } from 'react';
-import { Canvas, useFrame } from "react-three-fiber";
+import React, { useMemo } from 'react';
+import { Canvas } from "react-three-fiber";
 import Lights from "../../components/Options/ligthe";
-import Ambient from "../../components/Ambient";
+import Environment from "../../components/Environment";
 
 import { TrackballControls, Icosahedron } from 'drei';
 
@@ -28,7 +28,7 @@ function MultipleMashes() {
     <Canvas orthographic>
       <Lights />
       <TrackballControls />
-      <Ambient />
+      <Environment />
       <group position={[0, 0, -10]}>
       {positions.map(({ id, position }) => (
         <Icosahedron key={id} position={position} args={[1, 1]}>

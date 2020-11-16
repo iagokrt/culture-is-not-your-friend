@@ -1,7 +1,9 @@
 import React from "react";
 import { BackSide } from "three";
 
-export default () => {
+// from three: geometries Types, BufferGeometry & Material Types
+
+function Environment() {
   return (
     <mesh>
       <sphereBufferGeometry args={[150, 200, 200]} attach="geometry" />
@@ -9,8 +11,10 @@ export default () => {
         color={0x090a20}
         attach="material"
         side={BackSide}
-        metalness={0.5}
+        metalness={1}
       />
     </mesh>
   );
 };
+
+export default Environment

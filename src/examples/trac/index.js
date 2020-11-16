@@ -1,7 +1,7 @@
 import React, { useRef, Suspense } from 'react';
 import { Canvas, useFrame } from "react-three-fiber";
 import Lights from "./Lights";
-import Ambient from "../../components/Ambient";
+import Ambient from "./Ambient";
 
 import { TrackballControls, useGLTFLoader } from 'drei';
 

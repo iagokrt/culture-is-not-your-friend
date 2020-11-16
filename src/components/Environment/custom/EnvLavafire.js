@@ -1,7 +1,8 @@
 import React, { useRef, useState } from "react";
 import { useFrame } from "react-three-fiber";
 import { useSpring, a } from "react-spring/three";
-import { BackSide } from "three";
+import {  MeshWobbleMaterial } from "drei";
+import { BackSide, FrontSide, DoubleSide } from "three";
 
 const Ambient = ({color, speed, args}) => {
   const mesh = useRef();
@@ -9,16 +10,20 @@ const Ambient = ({color, speed, args}) => {
   useFrame((mesh.current.rotation.x = mesh.current.rotation.y += 0.01));
 }
 
-export default () => {
+function EnvLavafire() {
   return (
     <a.mesh>
       <sphereBufferGeometry args={[10, 11, 12]} attach="geometry" />
-      <meshStandardMaterial
-        color={'#7159c1'}
+      <MeshWobbleMaterial
+        color={'#a12620'}
         attach="material"
-        side={BackSide}
+        side={DoubleSide}
         metalness={0.42}
+        roughness={0.7}
+        factor={1}
       />
     </a.mesh>
   );
 };
+
+export default EnvLavafire

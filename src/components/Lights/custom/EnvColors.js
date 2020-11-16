@@ -1,7 +1,6 @@
-
 import React from "react";
 
-export default () => {
+function EnvColors() {
   const FakeSphere = () => {
     return (
       <mesh>
@@ -13,8 +12,11 @@ export default () => {
 
   return (
     <group>
+      <FakeSphere />
       <ambientLight intensity={0.9} />
       <pointLight intensity={1.12} position={[0, 0, 0]} />
     </group>
   );
 };
+
+export default EnvColors

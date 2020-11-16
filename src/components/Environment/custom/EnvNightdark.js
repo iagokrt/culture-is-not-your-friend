@@ -1,7 +1,10 @@
+/**
+ * To-do: Create custom behaviors
+ */
 import React from "react";
 import { BackSide } from "three";
 
-export default () => {
+function EnvNightdark() {
   return (
     <mesh>
       <sphereBufferGeometry args={[150, 200, 200]} attach="geometry" />
@@ -14,3 +17,5 @@ export default () => {
     </mesh>
   );
 };
+
+export default EnvNightdark;

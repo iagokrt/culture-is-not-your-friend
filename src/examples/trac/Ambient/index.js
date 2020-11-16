@@ -6,7 +6,7 @@ export default () => {
     <mesh>
       <sphereBufferGeometry args={[5, 10, 10]} attach="geometry" />
       <meshStandardMaterial
-        color={#f1f1cc}
+        color={'crimson'}
         attach="material"
         side={BackSide}
         metalness={0.12}

@@ -1,36 +1,41 @@
-import React, { useRef } from 'react';
-import { Canvas, useFrame } from "react-three-fiber";
-import Lights from "./Lights";
-import Ambient from "./Ambient";
+import React, { useMemo } from 'react';
+import { Canvas } from "react-three-fiber";
+import Environment from "../../components/Environment";
+/**import Lights from "../../components/Lights"; // no lights tho? */
 
-import { MapControls } from 'drei';
+import { MapControls, Octahedron } from 'drei';
 
-function Sphere(props) {
-  // This reference will give us direct access to the mesh
-  const mesh = useRef()
-
-  // Rotate mesh every frame, this is outside of React without overhead
-  useFrame(() => (mesh.current.rotation.x = mesh.current.rotation.y += 0.01))
-
-  return (
-    <mesh
-      {...props}
-      ref={mesh}
-      scale={[1.5, 1.5, 1.5]}
-    >
-      <sphereBufferGeometry args={[1, 1, 1]} />
-      <meshStandardMaterial color={'crimson'} />
-    </mesh>
-  )
-}
+const NUM = 3
 
 function Dark() {
+  const positions = useMemo(() => {
+    const pos = []
+    const half = (NUM -1) / 2
+
+    for (let x = 0; x < NUM; x++) {
+      for (let y = 0; y < NUM; y++) {
+        pos.push({
+          id: `${x}=${y}`,
+          position: [(x - half) * 4, (y - half) * 4, 0]
+        })
+      }
+    }
+
+    return pos
+  }, [])
+ 
+  
   return (
-    <Canvas>
-      <Lights />
-      <Sphere position={[-1.2, 0, 0]} />
+    <Canvas >
+      <Environment />
       <MapControls />
-      <Ambient />
+      <group position={[0, 0, -10]}>
+        {positions.map(({ id, position }) => (
+          <Octahedron key={id} position={position} args={[1, 1]}>
+            <meshToonMaterial attach="material" color="white" />
+          </Octahedron>
+        ))}
+      </group>
     </Canvas>
   );
 }

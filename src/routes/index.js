@@ -23,11 +23,13 @@ export default function Routes() {
     <BrowserRouter>
       <Switch>
         <Route exact path="/" component={Trac} />
-        <Route path="/one" component={Round} />
-        <Route path="/two" component={Dark} />
-        <Route path="/threejs" component={Spin} />
-        <Route path="/four" component={TracTwo} />
-        <Route path="/3d" component={multipleMashes} />
+        <Route path="/edition-v1" component={Round} />
+        <Route path="/edition-v2" component={Dark} />
+        <Route path="/edition-v3" component={Spin} />
+        <Route path="/edition-v4" component={TracTwo} />
+        <Route path="/edition-v5" component={Lockcam} />
+        <Route path="/edition-v6" component={multipleMashes} />
+
 
       </Switch>
     </BrowserRouter>

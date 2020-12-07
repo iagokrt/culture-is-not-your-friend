@@ -4,8 +4,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 /* examples */
 import Trac from '../examples/trac'
-import TracTwo from '../examples/tractwo'
-import Spin from '../examples/spin'
+
 
 /* component samples */
 
@@ -16,8 +15,8 @@ export default function Routes() {
   return (
     <BrowserRouter>
       <Switch>
-        <Route exact path="/" component={Spin} />
-        <Route path="/two" component={TracTwo} />
+        <Route exact path="/" component={Trac} />
+    
       </Switch>
     </BrowserRouter>
   );

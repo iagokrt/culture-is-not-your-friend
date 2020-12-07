@@ -29,8 +29,6 @@ export default function Routes() {
         <Route path="/edition-v4" component={TracTwo} />
         <Route path="/edition-v5" component={Lockcam} />
         <Route path="/edition-v6" component={multipleMashes} />
-
-
       </Switch>
     </BrowserRouter>
   );

@@ -1,15 +1,15 @@
 
 import React from "react";
 
-// from three: LightTypes
+function LightSet () {
 
-function Lights () {
   return (
     <group>
       <ambientLight intensity={0.9} />
-      <pointLight intensity={1.12} position={[0, 0, 0]} />
+      <pointLight position={[-10, 0, -20]} intensity={0.5} />
+      <pointLight position={[0, -10, 0]} intensity={1.5} />
     </group>
   );
-}
-  
-export default Lights
+};
+
+export default LightSet

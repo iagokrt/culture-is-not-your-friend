@@ -16,7 +16,6 @@ export default function Routes() {
     <BrowserRouter>
       <Switch>
         <Route exact path="/" component={Trac} />
-    
       </Switch>
     </BrowserRouter>
   );

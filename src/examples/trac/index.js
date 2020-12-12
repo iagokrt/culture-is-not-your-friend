@@ -1,9 +1,9 @@
 import React, { useRef, Suspense } from 'react';
 import { Canvas, useFrame } from "react-three-fiber";
+import { TrackballControls, useGLTFLoader } from 'drei';
+
 import Lights from "./Lights";
 import Ambient from "./Ambient";
-
-import { TrackballControls, useGLTFLoader } from 'drei';
 
 /* Load a model Example */
 function Model({ url }) {
@@ -28,15 +28,17 @@ const Shape = ({modelUrl}) => {
 
 function Trac() {
   return (
-    <Canvas concurrent camera={[0, 0, 0]}>
+    <>
+      <Canvas concurrent camera={[0, 0, 0]}>
 
-    <Suspense fallback={null}>
-        <Shape modelUrl={'/sphere.gltf'} />
-        <Lights />
-        <Ambient />
-        <TrackballControls />
-      </Suspense>
-    </Canvas>
+      <Suspense fallback={null}>
+          <Shape modelUrl={'/sphere.gltf'} />
+          <Lights />
+          <Ambient />
+          <TrackballControls />
+        </Suspense>
+      </Canvas>
+    </>
   );
 }
 
